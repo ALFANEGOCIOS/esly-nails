@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b76e79">
+<meta name="description" content="Esly Nails - Reserva tu cita de manicura, pedicura y nail art.">
+<title>Esly Nails | Belleza en cada detalle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="#"><span class="brand-mark">E</span><span><strong>Esly</strong> Nails</span></a>
+<nav id="nav"><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#reserva">Reservar</a><a href="#contacto">Contacto</a></nav>
+<a class="btn small" href="#reserva">Reservar cita</a><button class="menu" id="menuBtn">☰</button>
+</header>
+<main>
+<section class="hero">
+<div><p class="eyebrow">NAIL STUDIO · CUIDADO · ESTILO</p><h1>Tu estilo,<br><em>en cada detalle.</em></h1>
+<p class="lead">Manicuras, pedicuras y diseños pensados para que tus manos hablen por ti.</p>
+<div class="actions"><a class="btn" href="#reserva">Reservar mi cita ↗</a><a class="link" href="#trabajos">Ver trabajos ↓</a></div></div>
+<div class="hero-art"><div class="hero-image"></div><div class="floating"><b>✦</b><div><strong>Hecho con detalle</strong><small>Tu próxima manicura empieza aquí.</small></div></div></div>
+</section>
+<section class="section intro"><p class="label">01 / ELSY NAILS</p><div class="two"><h2>Pequeños detalles.<br><em>Gran diferencia.</em></h2><p>En Esly Nails cuidamos cada paso para que tengas una experiencia bonita, cómoda y personalizada. Elige tu servicio, mira la disponibilidad y reserva tu espacio en pocos minutos.</p></div></section>
+<section class="section" id="servicios"><div class="head"><div><p class="label">02 / SERVICIOS</p><h2>Elige tu <em>momento.</em></h2></div><p>Servicios configurables desde el panel del salón.</p></div><div class="service-grid" id="servicesGrid"><div class="loading">Cargando servicios...</div></div></section>
+<section class="section dark" id="trabajos"><div class="head"><div><p class="label">03 / TRABAJOS</p><h2>Ideas para tus <em>uñas.</em></h2></div><p>Una selección para inspirarte antes de tu cita.</p></div>
+<div class="gallery"><img src="images/work-01.svg" alt="Trabajo de uñas 1"><img src="images/work-02.svg" alt="Trabajo de uñas 2"><img src="images/work-03.svg" alt="Trabajo de uñas 3"><img src="images/work-04.svg" alt="Trabajo de uñas 4"><img src="images/work-05.svg" alt="Trabajo de uñas 5"><img src="images/work-06.svg" alt="Trabajo de uñas 6"></div>
+<p class="note">Sustituye estas imágenes por fotos reales de Esly Nails.</p></section>
+<section class="section booking" id="reserva"><div class="booking-copy"><p class="label">04 / RESERVAS</p><h2>Reserva tu<br><em>cita.</em></h2><p>Los horarios ocupados desaparecen automáticamente. La dueña controla qué días y horas están disponibles.</p><div class="rules"><p><b>01</b> Elige el servicio</p><p><b>02</b> Selecciona fecha y hora</p><p><b>03</b> Confirma tus datos</p></div></div>
+<form id="bookingForm" class="booking-form">
+<label>Servicio<select id="serviceSelect" required><option value="">Selecciona un servicio</option></select></label>
+<div id="serviceSummary" class="summary">Selecciona un servicio para continuar.</div>
+<div class="row"><label>Fecha<input type="date" id="dateInput" required></label><label>Horario<select id="timeSelect" required disabled><option value="">Primero elige fecha</option></select></label></div>
+<div id="availabilityBox" class="availability"><i></i><span>Selecciona servicio y fecha.</span></div>
+<div class="row"><label>Tu nombre<input id="customerName" maxlength="80" placeholder="Ej. Ana Pérez" required></label><label>Teléfono<input id="phone" maxlength="30" placeholder="Ej. +53..." required></label></div>
+<label>Nota <small>(opcional)</small><textarea id="notes" maxlength="500" rows="3" placeholder="¿Alguna petición especial?"></textarea></label>
+<button class="btn submit" id="submitBtn">Confirmar reserva ↗</button><p id="formMessage" class="message"></p>
+</form></section>
+<section class="section" id="contacto"><div class="contact"><div><p class="label">05 / CONTACTO</p><h2>Tu próxima cita<br><em>te espera.</em></h2></div><div><a class="btn white" id="whatsappLink" target="_blank">WhatsApp ↗</a><p id="address"></p></div></div></section>
+</main>
+<footer><span><strong>Esly Nails</strong> · Belleza en cada detalle.</span><span>© <b id="year"></b> Esly Nails</span></footer>
+<div class="modal" id="modal"><div class="backdrop"></div><div class="modal-card"><button id="closeModal">×</button><div class="success">✓</div><p class="eyebrow">RESERVA RECIBIDA</p><h2>Tu cita está <em>registrada.</em></h2><div id="confirmation"></div><a id="confirmWhatsapp" class="btn" target="_blank">Enviar por WhatsApp ↗</a></div></div>
+<script src="js/config.js"></script><script src="js/app.js"></script>
+</body></html>
